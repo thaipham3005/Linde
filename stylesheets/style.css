@@ -5,6 +5,16 @@ body {
     background: #34495e;
 }
 
+.big_link {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 40;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 .box {
     width: 300px;
     padding: 40px;
@@ -62,3 +72,4 @@ body {
 .box input[type="submit"]:hover {
     background: #2ecc71;
 }
+

@@ -1,26 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>َProject Central Information</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/e4f820a71a.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="description" content="Project Coordination" />
+    <meta name="keywords" content="project coordination, project management" />
+	<title>Linde Central Information</title>
+	<link href="images/project.png" rel="icon" type="image/png" />
+	<script>
+  	function go(loc) {
+    	document.getElementById('content-view').src = loc;
+  	} 	
+  	</script>
 
+  	<script>
+  		
+  	function toggle(){
+  		if (document.getElementById('menu').offsetWidth  == 220px)
+  			document.getElementById('menu').width = 30px;
+  		else
+  			document.getElementById('menu').width = 220px;
+  	}
+  	</script>
 </head>
-
 <body>
+	<section class="frame">
+		<div class="header clearfix">
+			<div class="title">
+				<h2>LINDE PRE-DRESSING OF COLUMNS</h2>
+				<h3> CENTRAL INFORMATION</h3>
+			</div>		
 
-    <form class="box" action="index.html" method="post">
-        <h1>Login</h1>
-        <input type="text" name="" placeholder="Username">
-        <input type="password" name="" placeholder="Password">
-        <input type="submit" name="" value="Login">
-    </form>
+			<img src="images/ptscmc.png" class="ptscmc" alt="PTSC M&C logo">
+			<img src="images/Linde.jpg" class="client" alt="Client logo">
+		</div>
+		<div class="operation clearfix">
+			<div class="menu" id="menu">
+				<button id="show-hide" onclick="toggle()"><i class="fas fa-layer-group"></i></button>
+				<ul>
+					<li onclick="go('https://docs.google.com/spreadsheets/d/1MPnhR7kjLoo0QaiopH4soh3iBtvs94IBGiH-6baHY2o/edit#gid=0')">
+						<i class="far fa-calendar-check fa-fw"></i>
+						<span>Check List</span>
+					</li>
+					<li onclick="go('https://docs.google.com/spreadsheets/d/1aVY4UyPF51BWc6wq3PewDIqMcFAiqwGbqPXM5RT1Ers/edit#gid=0')">
+						<i class="far fa-clipboard fa-fw"></i>
+						<span>PĐX - YCCV</span>
+					</li>
+					<li onclick="go('https://docs.google.com/spreadsheets/d/1wFtAZc9yU--0kL6_P7X9v4PnnBABcifFnImrjCqN2jA/edit?usp=sharing')">
+						<i class="far fa-address-book fa-fw"></i>
+						<span>Contact list</span>
+					</li>
+					<li onclick="go('https://docs.google.com/spreadsheets/d/1DcQ-499gn-V-OnOQSTQO71VpaNj1DAQ1WxQtd7FBRyM/edit#gid=0')">
+						<i class="fas fa-magic fa-fw"></i>
+						<span>Đăng ký nghỉ Tết</span>
+					</li>
+				</ul>
+			</div>
 
+			<div class="content">
+				<iframe id="content-view" src="https://drive.google.com/drive/u/0/folders/1D75lBBju-Nhabq7YPmwBGKBkwniwG2_F" type="application/pdf" frameborder="0" scrolling="no" seamless="seamless" allowtransparency="true"></iframe>
 
-<a href="Linde/linde-info.html" > Linde project </a>
+			</div>			
 
+			<footer>
+				<p>Developed by Pham Nam Thai</p>
+			</footer>
+
+		</div>
+	</section>
 </body>
-
 </html>
