@@ -8,12 +8,17 @@ body {
 	color: #333;
 	background-color: #f8f8f8;
 	line-height: 1.5;
-	font-family: Helvetica, sans-serif;
+	font-family: 'Poppins', sans-serif;
 	
 }
 ul {
 	list-style: none;
 }
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 
 .clearfix {
     zoom: 1;
@@ -43,6 +48,7 @@ visibility: hidden;
 
 .frame .header .title {
 	display: inline-block;
+	font-weight: 600;
 }
 .frame .header img {
 	display: inline-block;
@@ -57,6 +63,51 @@ visibility: hidden;
 .frame .header .client {
 	float:left;
 	width: 120px;
+}
+
+nav {
+	height: 40px;
+	background-color: #4C4A48;
+	width: 100%;
+}
+nav ul{
+	float: right;
+	font-size: 14px;
+	margin-right: 30px;
+}
+
+nav ul li{
+	display: inline-block;
+	margin: 5px 15px 5px;
+	position: relative;
+	color: #ecf0f1;
+}
+
+
+nav ul li:hover{
+	color: #2ecc71;
+}
+
+nav ul li::before {
+	content: '';
+	display: block;	
+	height: 5px;
+	width: 0%;
+	background-color: #2ecc71;
+	margin-bottom: 5px;	
+	transition: 0.3s all ease-in-out;
+}
+
+nav ul li:hover::before {
+	width: 100%;
+}
+
+nav ul li.active{
+	color: #2ecc71;
+}
+nav ul li.active::before{
+	background-color: #2ecc71;
+	width: 100%;
 }
 
 .frame .operation {
@@ -74,13 +125,13 @@ visibility: hidden;
 }
 .frame .operation .content iframe{
 	width: 100%;
-	height: 820px;
+	height: 780px;
 }
 
 .frame .operation .menu {
 	position: absolute;
 	width: 45px;
-	height: 820px;
+	height: 780px;
 	background-color: #3e3e3e;
 	display: block;
 	float: left;
@@ -113,11 +164,12 @@ visibility: hidden;
 	display: block;
 	white-space: nowrap;
 	overflow: hidden;
+	transition: 0.3s all ease-in-out;
 }
 
 .frame .operation .menu ul li i {
 	margin-left: 7px;
-	font-size: 20px;
+	font-size: 25px;
 }
 
 .frame .operation .menu ul li span {
@@ -126,6 +178,16 @@ visibility: hidden;
 }
 
 .frame .operation .menu ul li:hover {
+	font-weight: bold;
+	background-color: #e1e1e1;
+	color: #333;
+}
+
+.frame .operation .menu ul li.active {
+	background-color: #018574;
+}
+
+.frame .operation .menu ul li.active:hover {
 	font-weight: bold;
 	background-color: #e1e1e1;
 	color: #333;
@@ -155,7 +217,7 @@ footer {
 	width: 100%;
 	height: 25px;
 	text-align: center;
-	line-height: 1.5;
+	line-height: 2;
 	z-index: 99;
 }
 

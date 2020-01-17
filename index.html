@@ -4,30 +4,43 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/e4f820a71a.js" crossorigin="anonymous"></script>
+	<script  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="description" content="Project Coordination" />
     <meta name="keywords" content="project coordination, project management" />
 	<title>Linde Central Information</title>
 	<link href="images/project.png" rel="icon" type="image/png" />
-	<script>
-  	function go(loc) {
-    	document.getElementById('content-view').src = loc;
-  	} 	
+	<script type="text/javascript">
+  		function go(loc) {
+    		document.getElementById('content-view').src = loc;
+    		$(this).siblings('.active').toggleClass("active");
+		    $(this).parent().toggleClass("active");
+  		}
+  		
   	</script>
 
-  	<script>
-  		
-  	function toggle(){
-  		if (document.getElementById('menu').offsetWidth  == 220px)
-  			document.getElementById('menu').width = 30px;
-  		else
-  			document.getElementById('menu').width = 220px;
-  	}
+  	<script type="text/javascript">
+  		$(document).ready(function(){
+  			$('.option').click(function() {
+		    	//first remove the existing element with active class, if it exists.
+		    	$(this).siblings().removeClass("active");
+			    //then add active to the clicked item
+			    $(this).addClass("active");
+			});
+
+			$('.module').click(function() {
+		    	//first remove the existing element with active class, if it exists.
+		    	$(this).siblings().removeClass("active");
+			    //then add active to the clicked item
+			    $(this).addClass("active");
+			});
+  		});
   	</script>
 </head>
 <body>
 	<section class="frame clearfix">
-		<div class="header clearfix">
+		<div class="header">
 			<div class="title">
 				<h2>LINDE PRE-DRESSING OF COLUMNS</h2>
 				<h3> CENTRAL INFORMATION</h3>
@@ -36,23 +49,44 @@
 			<img src="images/ptscmc.png" class="ptscmc" alt="PTSC M&C logo">
 			<img src="images/Linde.jpg" class="client" alt="Client logo">
 		</div>
+		<div class="nav-bar">
+			<nav>
+				<ul>
+					<li class="module active"><a href="http://project-info.ptscmc.com.vn/linde/">FORMS</a></li>
+					<li class="module"><a href="">PROJECT MANAGEMENT</a></li>
+					<li class="module"><a href="">PROJECT DOCS</a></li>
+					<li class="module"><a href="">ABOUT</a></li>
+				</ul>	
+			</nav>
+		</div>
+		
+		
+		
 		<div class="operation clearfix">
 			<div class="menu" id="menu">
 				<button id="show-hide" onclick="toggle()"><i class="fas fa-layer-group"></i></button>
 				<ul>
-					<li onclick="go('https://docs.google.com/spreadsheets/d/1MPnhR7kjLoo0QaiopH4soh3iBtvs94IBGiH-6baHY2o/edit#gid=0')">
+					<li class="option active" onclick="go('https://project-info.xyz/docs/OrganizationChart.pdf')">
+						<i class="	fas fa-sitemap fa-fw"></i>
+						<span>Organization Chart</span>
+					</li>
+					<li class="option" onclick="go('https://docs.google.com/spreadsheets/d/1MPnhR7kjLoo0QaiopH4soh3iBtvs94IBGiH-6baHY2o/edit#gid=0')">
 						<i class="far fa-calendar-check fa-fw"></i>
 						<span>Check List</span>
 					</li>
-					<li onclick="go('https://docs.google.com/spreadsheets/d/1aVY4UyPF51BWc6wq3PewDIqMcFAiqwGbqPXM5RT1Ers/edit#gid=0')">
+					<li class="option" onclick="go('https://docs.google.com/spreadsheets/d/1aVY4UyPF51BWc6wq3PewDIqMcFAiqwGbqPXM5RT1Ers/edit#gid=0')">
 						<i class="far fa-clipboard fa-fw"></i>
 						<span>PĐX - YCCV</span>
 					</li>
-					<li onclick="go('https://docs.google.com/spreadsheets/d/1wFtAZc9yU--0kL6_P7X9v4PnnBABcifFnImrjCqN2jA/edit?usp=sharing')">
+					<li class="option" onclick="go('https://docs.google.com/spreadsheets/d/1wFtAZc9yU--0kL6_P7X9v4PnnBABcifFnImrjCqN2jA/edit?usp=sharing')">
 						<i class="far fa-address-book fa-fw"></i>
 						<span>Contact list</span>
 					</li>
-					<li onclick="go('https://docs.google.com/spreadsheets/d/1DcQ-499gn-V-OnOQSTQO71VpaNj1DAQ1WxQtd7FBRyM/edit#gid=0')">
+					<li class="option" onclick="go('https://docs.google.com/spreadsheets/d/1lrKns-7s5mt3iDeT4Rt9OIuz9DvOaiu38yq0yH9nubo/edit#gid=0')">
+						<i class="far fa-envelope fa-fw"></i>
+						<span>Distribution Matrix</span>
+					</li>
+					<li class="option" onclick="go('https://docs.google.com/spreadsheets/d/1DcQ-499gn-V-OnOQSTQO71VpaNj1DAQ1WxQtd7FBRyM/edit#gid=0')">
 						<i class="fas fa-magic fa-fw"></i>
 						<span>Đăng ký nghỉ Tết</span>
 					</li>
@@ -61,8 +95,8 @@
 
 			<div class="content">
 				<iframe id="content-view" src="https://project-info.xyz/docs/OrganizationChart.pdf" type="application/pdf" frameborder="0" scrolling="no" seamless="seamless" allowtransparency="true"></iframe>
-
-			</div>			
+			</div>
+			
 
 			<footer>
 				<p>Developed by Pham Nam Thai</p>
