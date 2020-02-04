@@ -9,7 +9,7 @@ body {
 	background-color: #f8f8f8;
 	line-height: 1.5;
 	font-family: 'Poppins', sans-serif;
-	
+
 }
 ul {
 	list-style: none;
@@ -58,6 +58,7 @@ visibility: hidden;
 
 .frame .header .ptscmc {
 	float: right;
+	width: 60px;
 }
 
 .frame .header .client {
@@ -66,7 +67,7 @@ visibility: hidden;
 }
 
 nav {
-	height: 40px;
+	height: 35px;
 	background-color: #4C4A48;
 	width: 100%;
 }
@@ -90,11 +91,11 @@ nav ul li:hover{
 
 nav ul li::before {
 	content: '';
-	display: block;	
-	height: 5px;
+	display: block;
+	height: 3px;
 	width: 0%;
 	background-color: #2ecc71;
-	margin-bottom: 5px;	
+	margin-bottom: 2px;
 	transition: 0.3s all ease-in-out;
 }
 
@@ -115,12 +116,12 @@ nav ul li.active::before{
 }
 
 .frame .operation .content {
-	
+
 	position: absolute;
 	float: left;
 	margin: 5px;
 	margin-left: 50px;
-	display: block;	
+	display: block;
 	width: calc(99% - 45px);
 }
 .frame .operation .content iframe{
@@ -152,7 +153,7 @@ nav ul li.active::before{
 
 
 .frame .operation .menu ul li {
-	height: 40px;	
+	height: 40px;
 	margin: 2px 0;
 	background-color: #3e3e3e;
 	color:#eee;
@@ -201,7 +202,7 @@ nav ul li.active::before{
 	border-radius: 50%;
 	border-style: none;
 	box-shadow: none;
-	cursor: pointer;	
+	cursor: pointer;
 }
 
 footer {
@@ -219,10 +220,10 @@ footer {
 
 @media only screen and (max-width: 1280px)
 {
-	
+
 }
 
 @media only screen and (max-width: 640px)
 {
-	
+
 }
