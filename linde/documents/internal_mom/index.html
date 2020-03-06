@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Any title here" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.supinfo.com/articles/resources/214348/5752/0.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e4f820a71a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Linde/css/style.css">
+    <meta name="description" content="Project Coordination" />
+    <meta name="keywords" content="project coordination, project management" />
+    <title>Linde Central Information</title>
+    <link href="/linde/images/project.png" rel="icon" type="image/png" />
+
+    <link rel="image_src" href="https://www.supinfo.com/articles/resources/214348/5752/0.png">
+
+</head>
+
+<body>
+
+    <header class="header clearfix">
+        <img src="/linde/images/project.png" class="ptscmc" alt="PTSC M&C logo">
+        <div class="title">
+            <h2>PROJECT CENTRAL INFORMATION</h2>
+        </div>
+
+
+        <!-- <img src="/linde/images/Linde.jpg" class="client" alt="Client logo"> -->
+    </header>
+
+    <nav class="nav-bar">
+        <ul>
+            <li class="module"><a href="/linde/">FORMS</a></li>
+            <li class="module"><a href="">MANAGEMENT</a></li>
+            <li class="module active"><a href="/linde/documents/internal_mom/">DOCUMENTS</a></li>
+            <li class="module"><a href="">ABOUT</a></li>
+        </ul>
+    </nav>
+
+    <div class="operation clearfix">
+        <div class="menu" id="menu">
+            <button id="show-hide" onclick="toggle()"><i class="fas fa-layer-group"></i></button>
+            <ul>
+
+
+
+                <li class="option">
+                    <a href="/linde/documents/external_mom">
+                        <i class="far fa-envelope fa-fw"></i>
+                        <span>External MOM</span>
+                    </a>
+                </li>
+
+                <li class="option active">
+                    <a href="/linde/documents/internal_mom">
+                        <i class="fas fa-clipboard-list fa-fw"></i>
+                        <span>Internal MOM</span>
+                    </a>
+                </li>
+
+                <li class="option">
+                    <a href="/linde/documents/others">
+                        <i class="fas fa-business-time fa-fw"></i>
+                        <span>Other MOM</span>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+
+        <div class="content">
+            <ul class="list-doc" id="list-doc"></ul>
+            <iframe id="content-view" src="" type="application/pdf" frameborder="0" scrolling="no" seamless="seamless" allowtransparency="true"></iframe>
+        </div>
+
+
+
+
+    </div>
+
+    <footer>
+        <p>Developed by Pham Nam Thai</p>
+    </footer>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.option').click(function() {
+                //first remove the existing element with active class, if it exists.
+                $(this).siblings().removeClass("active");
+                //then add active to the clicked item
+                $(this).addClass("active");
+            });
+
+            $('.module').click(function() {
+                //first remove the existing element with active class, if it exists.
+                $(this).siblings().removeClass("active");
+                //then add active to the clicked item
+                $(this).addClass("active");
+            });
+        });
+    </script>
+    <script src="/linde/scripts/script.js"></script>
+    <script>
+        loadMOM();
+    </script>
+
+</body>
+
+</html>
