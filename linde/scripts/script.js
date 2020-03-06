@@ -1,3 +1,12 @@
+var project = document.getElementById("project").children[0];
+project.innerHTML = "linde";
+
+var host = window.location.origin;
+var title = document.querySelectorAll(".header .title h2 a");
+title[0].href = host;
+var title2 = document.querySelectorAll(".header .title h3 a");
+title2[0].href = host + "/" + project.innerHTML;
+
 function loadMOM() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -76,7 +85,7 @@ function loadForms() {
                     item.classList.toggle("active");
                     var link = forms[i]["link"];
                     document.getElementById("content-view").src = link;
-                    console.log(link);
+
                 }
 
                 // opt[i].addEventListener('click', function() {
