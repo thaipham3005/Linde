@@ -1,7 +1,7 @@
 [{
     "option": "Organization Chart",
     "icon": "fas fa-sitemap fa-fw",
-    "link": "linde/docs/OrganizationChart.pdf",
+    "link": "/linde/docs/OrganizationChart.pdf",
     "location": "/linde/"
 }, {
     "option": "Check List",
