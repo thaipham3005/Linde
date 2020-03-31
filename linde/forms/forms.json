@@ -53,4 +53,9 @@
     "icon": "fas fa-motorcycle fa-fw",
     "link": "https://docs.google.com/spreadsheets/d/1hEJZkp94x5vAEEiOjeuI9RO_Mt9A6wExUmg7t3nsSGo/edit?usp=sharing",
     "location": "/linde/forms/Working-Saturday/"
+}, {
+    "option": "Custom input",
+    "icon": "fas fa-bullhorn fa-fw",
+    "link": "https://docs.google.com/spreadsheets/d/1StMYOS09eYBYXEm2ZBtt1-sNXf-RTgsXnvPGB-iTLuo/edit?usp=sharing",
+    "location": "/linde/forms/Custom-input/"
 }]
