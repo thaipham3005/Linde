@@ -143,11 +143,11 @@ nav ul li.active::before {
 .operation .content {
     position: absolute;
     float: left;
-    margin-left: 45px;
+    margin-left: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: calc(99vw - 45px);
+    width: calc(99vw - 0px);
 }
 
 .operation .content ul {
