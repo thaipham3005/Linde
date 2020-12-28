@@ -106,6 +106,6 @@ function loadForms() {
         }
     };
 
-    xmlhttp.open("GET", "/linde/forms/forms.json", true);
+    xmlhttp.open("GET", "/Project-info/linde/forms/forms.json", true);
     xmlhttp.send();
 }
